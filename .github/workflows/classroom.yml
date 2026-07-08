@@ -35,6 +35,8 @@ jobs:
         run: |
           python -c "
           import os, json, sys
+          from google.oauth2 import service_account
+          from googleapiclient.discovery import build
 
           student_email = None
           if os.path.exists('student.txt'):
